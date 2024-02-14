@@ -7,9 +7,7 @@ import kotlin.random.Random
     Victor Liu - A00971668 - set C
  */
 
-class Gather(minion: Minion) : Mission(minion), Repeatable {
-
-
+class Gather(minion: Minion) : Mission(minion) {
     override fun determineMissionTime(): Int {
         return (minion.backpackSize + minion.baseSpeed) * Random.nextInt(5)
     }
@@ -25,12 +23,4 @@ class Gather(minion: Minion) : Mission(minion), Repeatable {
             "Nothing"
         }
     }
-
-    override fun repeat(num: Int, listener: MissionListener) {
-        for (i in 1..num) {
-            println("Game instance #$i")
-            start(listener)
-        }
-    }
-
 }
