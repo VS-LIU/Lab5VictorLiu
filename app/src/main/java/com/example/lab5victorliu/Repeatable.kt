@@ -6,5 +6,6 @@ package com.example.lab5victorliu
  */
 
 interface Repeatable {
+    abstract val repeatNum: Int
     fun repeat(num: Int, listener: MissionListener): Unit
 }

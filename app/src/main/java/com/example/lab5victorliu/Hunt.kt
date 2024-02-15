@@ -7,10 +7,8 @@ import kotlin.random.Random
     Victor Liu - A00971668 - set C
  */
 
-class Hunt(minionObject: Minion) : Mission(minionObject), Repeatable {
-
-
-    override fun determineMissionTime(): Int {
+class Hunt(minionObject: Minion, override val repeatNum: Int) : Mission(minionObject), Repeatable {
+        override fun determineMissionTime(): Int {
         return ((minion.baseHealth + minion.baseSpeed + (this.item?.timeModifier!!)) * Random.nextInt(5))
     }
 
