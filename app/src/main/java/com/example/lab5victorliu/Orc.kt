@@ -5,15 +5,13 @@ package com.example.lab5victorliu
     Victor Liu - A00971668 - set C
  */
 
-class Orc: Minion {
+class Orc(minion: Minion): Minion by minion {
+    // Orc should delegate its HP, speed, and backpack to an Elf
+
+    private val minion = minion
     override val race: String
-        get() = "Dwarf"
-    override val baseHealth: Int
-        get() = 8
-    override val baseSpeed: Int
-        get() = 2
-    override val backpackSize: Int
-        get() = 8
+        get() = "Orc"
+
     override val catchphrase: String
         get() = "ARRGH!"
 }
