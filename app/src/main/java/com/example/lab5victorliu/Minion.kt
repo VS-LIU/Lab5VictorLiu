@@ -5,10 +5,11 @@ package com.example.lab5victorliu
     Victor Liu - A00971668 - set C
  */
 
-abstract class Minion {
+interface Minion {
     abstract val race: String
     abstract val baseHealth: Int
     abstract val baseSpeed: Int
     abstract val backpackSize: Int
     abstract val catchphrase: String
+
 }
