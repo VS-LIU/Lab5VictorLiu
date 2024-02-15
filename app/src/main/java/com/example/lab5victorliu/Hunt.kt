@@ -11,7 +11,7 @@ class Hunt(minionObject: Minion) : Mission(minionObject), Repeatable {
 
 
     override fun determineMissionTime(): Int {
-        return (minion.baseHealth + minion.baseSpeed) * Random.nextInt(5)
+        return ((minion.baseHealth + minion.baseSpeed + (this.item?.timeModifier!!)) * Random.nextInt(5))
     }
 
     override fun reward(value: Int): String {

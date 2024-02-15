@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 class Gather(minion: Minion) : Mission(minion) {
     override fun determineMissionTime(): Int {
-        return (minion.backpackSize + minion.baseSpeed) * Random.nextInt(5)
+        return ((minion.backpackSize + minion.baseSpeed + (this.item?.timeModifier!!)) * Random.nextInt(5))
     }
 
     override fun reward(value: Int): String {
