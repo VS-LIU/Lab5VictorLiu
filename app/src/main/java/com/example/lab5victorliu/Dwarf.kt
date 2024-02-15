@@ -5,7 +5,7 @@ package com.example.lab5victorliu
     Victor Liu - A00971668 - set C
  */
 
-class Dwarf: Minion() {
+class Dwarf: Minion {
     override val race: String
         get() = "Dwarf"
     override val baseHealth: Int
